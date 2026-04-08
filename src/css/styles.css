@@ -116,12 +116,22 @@
 }
 
 .feedback-form button {
-  padding: 10px 16px;
-  border: none;
-  border-radius: 4px;
-  background-color: #0077cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 8px;
+  padding-block: 8px;
+  padding-inline: 16px;
+  width: 95px;
+  height: 40px;
+  background: #4e75ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   color: #fff;
-  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
