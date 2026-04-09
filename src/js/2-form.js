@@ -43,3 +43,46 @@ form.addEventListener("submit", (event) => {
   form.reset();
   formData = { email: "", message: "" };
 });
+
+
+// states
+
+const formStates = document.querySelector(".feedback-states");
+const STORAGE_KEY_STATES = "feedback-states-form-state";
+
+let formDataStates = {
+  email: "",
+  message: "",
+};
+
+// Відновлення даних
+const savedDataStates = JSON.parse(localStorage.getItem(STORAGE_KEY_STATES));
+if (savedDataStates) {
+  formDataStates = savedDataStates;
+  formStates.elements.email.value = savedDataStates.email || "";
+  formStates.elements.message.value = savedDataStates.message || "";
+}
+
+// Делегування input
+formStates.addEventListener("input", (event) => {
+  if (event.target.name === "email" || event.target.name === "message") {
+    formDataStates[event.target.name] = event.target.value;
+    localStorage.setItem(STORAGE_KEY_STATES, JSON.stringify(formDataStates));
+  }
+});
+
+// Відправка
+formStates.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  if (!formDataStates.email.trim() || !formDataStates.message.trim()) {
+    alert("Fill please all fields");
+    return;
+  }
+
+  console.log("Form submitted (states):", formDataStates);
+
+  localStorage.removeItem(STORAGE_KEY_STATES);
+  formStates.reset();
+  formDataStates = { email: "", message: "" };
+});

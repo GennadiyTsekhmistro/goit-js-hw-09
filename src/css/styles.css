@@ -235,7 +235,7 @@
   width: 95px;
   height: 40px;
   border: none;
-  background: #4e75ff;
+  
   border-radius: 8px;
   padding-inline: 16px;
   width: 95px;
@@ -247,6 +247,14 @@
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
+}
+
+.btn-normal button {
+  background: #4e75ff;
+}
+
+.btn-hover button {
+  background: #6c8cff;;
 }
 
 .btn-normal p,
