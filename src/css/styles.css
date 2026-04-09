@@ -148,7 +148,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   padding: 28px;
   width: 494px;
   height: 496px;
@@ -207,4 +207,53 @@
 
 .label-hover input {
   border: 1px solid #000;
+}
+
+.btn-normal {
+  margin-top: 72px;
+}
+
+.feedback-states .btn-normal,
+.feedback-states .btn-hover {
+  display: flex;
+  align-items: center;         
+  justify-content: flex-start; 
+  gap: 16px;
+  margin-top: 16px;            
+  padding: 0;                  
+  width: 100%;                 
+  box-sizing: border-box;      
+}
+
+.btn-normal button,
+.btn-hover button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  width: 95px;
+  height: 40px;
+  border: none;
+  background: #4e75ff;
+  border-radius: 8px;
+  padding-inline: 16px;
+  width: 95px;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.btn-normal p,
+.btn-hover p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #000;
 }
