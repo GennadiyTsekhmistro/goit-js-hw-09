@@ -2,7 +2,7 @@ import"./assets/modulepreload-polyfill-B5Qt9EMX.js";/* empty css                
   <li class="gallery-item">
     <a class="gallery-link" href="${i}">
       <img
-        class="gallery__image"
+        class="gallery-image"
         src="${e}"
         data-source="${i}"
         alt="${t}"
