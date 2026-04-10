@@ -27,7 +27,7 @@
   list-style: none;
 }
 
-.gallery__image {
+.gallery-image {
   width: 100%;
   height: auto;
   border-radius: 8px;
@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-.gallery__image:hover {
+.gallery-image:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }

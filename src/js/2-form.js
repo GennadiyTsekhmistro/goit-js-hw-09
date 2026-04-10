@@ -8,14 +8,18 @@ let formData = {
 };
 
 // 1. Відновлення даних при завантаженні сторінки
-const savedData = JSON.parse(localStorage.getItem(STORAGE_KEY));
+let savedData = null;
+
+try {
+  savedData = JSON.parse(localStorage.getItem(STORAGE_KEY));
+} catch (error) {
+  savedData = null;
+}
+
 if (savedData) {
   formData = savedData;
   form.elements.email.value = savedData.email || "";
   form.elements.message.value = savedData.message || "";
-} else {
-  form.elements.email.value = "";
-  form.elements.message.value = "";
 }
 
 // 2. Делегування: слухаємо input на формі
@@ -56,7 +60,14 @@ let formDataStates = {
 };
 
 // Відновлення даних
-const savedDataStates = JSON.parse(localStorage.getItem(STORAGE_KEY_STATES));
+let savedDataStates = null;
+
+try {
+  savedDataStates = JSON.parse(localStorage.getItem(STORAGE_KEY_STATES));
+} catch (error) {
+  savedDataStates = null;
+}
+
 if (savedDataStates) {
   formDataStates = savedDataStates;
   formStates.elements.email.value = savedDataStates.email || "";
