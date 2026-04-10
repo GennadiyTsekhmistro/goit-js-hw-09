@@ -51,49 +51,49 @@ form.addEventListener("submit", (event) => {
 
 // states
 
-const formStates = document.querySelector(".feedback-states");
-const STORAGE_KEY_STATES = "feedback-states-form-state";
+// const formStates = document.querySelector(".feedback-states");
+// const STORAGE_KEY_STATES = "feedback-states-form-state";
 
-let formDataStates = {
-  email: "",
-  message: "",
-};
+// let formDataStates = {
+//   email: "",
+//   message: "",
+// };
 
-// Відновлення даних
-let savedDataStates = null;
+// // Відновлення даних
+// let savedDataStates = null;
 
-try {
-  savedDataStates = JSON.parse(localStorage.getItem(STORAGE_KEY_STATES));
-} catch (error) {
-  savedDataStates = null;
-}
+// try {
+//   savedDataStates = JSON.parse(localStorage.getItem(STORAGE_KEY_STATES));
+// } catch (error) {
+//   savedDataStates = null;
+// }
 
-if (savedDataStates) {
-  formDataStates = savedDataStates;
-  formStates.elements.email.value = savedDataStates.email || "";
-  formStates.elements.message.value = savedDataStates.message || "";
-}
+// if (savedDataStates) {
+//   formDataStates = savedDataStates;
+//   formStates.elements.email.value = savedDataStates.email || "";
+//   formStates.elements.message.value = savedDataStates.message || "";
+// }
 
-// Делегування input
-formStates.addEventListener("input", (event) => {
-  if (event.target.name === "email" || event.target.name === "message") {
-    formDataStates[event.target.name] = event.target.value;
-    localStorage.setItem(STORAGE_KEY_STATES, JSON.stringify(formDataStates));
-  }
-});
+// // Делегування input
+// formStates.addEventListener("input", (event) => {
+//   if (event.target.name === "email" || event.target.name === "message") {
+//     formDataStates[event.target.name] = event.target.value;
+//     localStorage.setItem(STORAGE_KEY_STATES, JSON.stringify(formDataStates));
+//   }
+// });
 
-// Відправка
-formStates.addEventListener("submit", (event) => {
-  event.preventDefault();
+// // Відправка
+// formStates.addEventListener("submit", (event) => {
+//   event.preventDefault();
 
-  if (!formDataStates.email.trim() || !formDataStates.message.trim()) {
-    alert("Fill please all fields");
-    return;
-  }
+//   if (!formDataStates.email.trim() || !formDataStates.message.trim()) {
+//     alert("Fill please all fields");
+//     return;
+//   }
 
-  console.log("Form submitted (states):", formDataStates);
+//   console.log("Form submitted (states):", formDataStates);
 
-  localStorage.removeItem(STORAGE_KEY_STATES);
-  formStates.reset();
-  formDataStates = { email: "", message: "" };
-});
+//   localStorage.removeItem(STORAGE_KEY_STATES);
+//   formStates.reset();
+//   formDataStates = { email: "", message: "" };
+// });
